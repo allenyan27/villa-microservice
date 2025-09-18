@@ -1,0 +1,21 @@
+{
+    "name": "villa-service",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc",
+        "dev": "nodemon --exec ts-node src/grpc-server.ts",
+        "start": "node dist/grpc-server.js"
+    },
+    "dependencies": {
+        "@grpc/grpc-js": "^1.9.0",
+        "@grpc/proto-loader": "^0.7.0",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "@types/uuid": "^9.0.0",
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0",
+        "nodemon": "^3.0.0"
+    }
+}

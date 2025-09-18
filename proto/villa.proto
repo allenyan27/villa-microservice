@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package villa;
+
+service VillaService {
+    rpc GetVilla (GetVillaRequest) returns (Villa);
+    rpc GetAllVillas (GetAllVillasRequest) returns (GetAllVillasResponse);
+    rpc CreateVilla (CreateVillaRequest) returns (Villa);
+    rpc UpdateVilla (UpdateVillaRequest) returns (Villa);
+    rpc DeleteVilla (DeleteVillaRequest) returns (DeleteVillaResponse);
+}
+
+message Villa {
+    string id = 1;
+    string name = 2;
+    string location = 3;
+    int32 price = 4;
+    int32 rooms = 5;
+    bool available = 6;
+    string description = 7;
+}
+
+message GetVillaRequest {
+    string id = 1;
+}
+
+message GetAllVillasRequest {
+    int32 page = 1;
+    int32 limit = 2;
+}
+
+message GetAllVillasResponse {
+    repeated Villa villas = 1;
+    int32 total = 2;
+}
+
+message CreateVillaRequest {
+    string name = 1;
+    string location = 2;
+    int32 price = 3;
+    int32 rooms = 4;
+    string description = 5;
+}
+
+message UpdateVillaRequest {
+    string id = 1;
+    string name = 2;
+    string location = 3;
+    int32 price = 4;
+    int32 rooms = 5;
+    bool available = 6;
+    string description = 7;
+}
+
+message DeleteVillaRequest {
+    string id = 1;
+}
+
+message DeleteVillaResponse {
+    bool success = 1;
+    string message = 2;
+}
