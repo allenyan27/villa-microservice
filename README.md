@@ -479,5 +479,3 @@ If you have any questions or issues:
 ---
 
 **Happy Coding! 🚀**
-
-Made with ❤️ for the developer community
